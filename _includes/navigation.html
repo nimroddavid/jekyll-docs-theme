@@ -9,7 +9,9 @@
             </button>
             <a class="navbar-brand" href="{{ 'index.html' | relative_url }}">{{ site.name }}</a>
         </div>
+
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        {% if site.links.header.size == 0 and site.autonav %}
             <ul class="nav navbar-nav">
                 {% assign sorted_pages = site.pages | sort: "name" %}
                 {% for p in sorted_pages %}
@@ -20,6 +22,8 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        {% endif %}
+        {% if site.links.header.size > 0 %}
             <ul class="nav navbar-nav navbar-right">
                 {% for p in site.links.header %}
                     <li>
@@ -27,6 +31,7 @@
                     </li>
                 {% endfor %}
             </ul>
+        {% endif %}
         </nav>
     </div>
 </header>
