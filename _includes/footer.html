@@ -72,8 +72,7 @@
                 <li>&middot;</li>
                 <li>
                     {% if l.image_url %}
-                    <a href="{{ l.url }}"><img src={{l.image_url}}/></a>
-
+                    <a href="{{ l.url }}"><img alt={{l.title}} src={{l.image_url}}/></a>
                     {% else %}
                     <a href="{{ l.url }}">{{ l.title }}</a>
                     {% endif%}
