@@ -7,7 +7,7 @@
 <link rel="icon" type="{% if site.favicon == 'png' %}image/png{% else %}image/x-icon{% endif %}" href="{{site.github.url}}/favicon.{{site.favicon}}"/>
 {% endif %}
 
-<meta name="theme-color" content="site.ui.main_color">
+<meta name="theme-color" content="{{site.ui.main_color}}">
 <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
