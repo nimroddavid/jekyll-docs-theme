@@ -3,18 +3,23 @@
 
 //table hack
 
-table {
-  border-collapse: collapse !important;
-}
-table td,
-table th {
-  background-color: #fff !important;
-  border: 1px solid #ddd !important;
-}
+// table {
+//   width: 100%;
+//   max-width: 100%;
+//   margin-bottom: 20px;
+//   border-collapse: collapse !important;
+//   border: 1px solid #ddd;
+//   background-color: transparent;
+//   background-color: transparent;
+// }
+// table td,
+// table th {
+//   border: 1px solid #ddd !important;
+// }
 
-table > tbody > tr:nth-of-type(odd) {
-  background-color: #f9f9f9;
-}
+// table > tbody > tr:nth-of-type(odd) {
+//   background-color: #f9f9f9;
+// }
 
 //end of table hack
 
