@@ -7,9 +7,8 @@
 <link rel="icon" type="{% if site.favicon == 'png' %}image/png{% else %}image/x-icon{% endif %}" href="{{site.github.url}}/favicon.{{site.favicon}}"/>
 {% endif %}
 
-
-<meta name="description"
-      content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+<meta name="theme-color" content="site.ui.main_color">
+<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{ "/assets/css/docs.css"   | relative_url }}">
@@ -20,20 +19,20 @@
 
 <style>
     #jumbotron-header {
-        background: {{ site.ui.header.color1 }};
-        background: linear-gradient(135deg, {{ site.ui.header.color1 }}, {{ site.ui.header.color2 }});
+        background: {{ site.ui.header.main_color }};
+        background: linear-gradient(135deg, {{ site.ui.header.main_color }}, {{ site.ui.header.secondary_color }});
     }
     .bs-docs-footer {
-        {% if site.ui.footer.color1 %}
-            background:{{site.ui.footer.color1}};
+        {% if site.ui.footer.main_color %}
+            background:{{site.ui.footer.main_color}};
         {% endif %}
-        {% if site.ui.footer.color2 %}
-            color:{{site.ui.footer.color2}};
+        {% if site.ui.footer.secondary_color %}
+            color:{{site.ui.footer.secondary_color}};
         {% endif %}
     }
     .bs-docs-footer a{
-        {% if site.ui.footer.color3 %}
-        color:{{site.ui.footer.color3}};
+        {% if site.ui.footer.secondary_color %}
+        color:{{site.ui.footer.secondary_color}};
         {% endif %}
     }
 </style>
