@@ -1,4 +1,4 @@
-<footer class="bs-docs-footer" role="contentinfo" style="{% if site.ui.footer.color1 %}background:{{site.ui.footer.color1}}"{%endif%}>
+<footer class="bs-docs-footer" role="contentinfo">
     <div class="container">
         <div class="bs-docs-social">
             <ul class="bs-docs-social-buttons">
@@ -69,7 +69,6 @@
                 <li>Currently v{{ site.project.version }}</li>
             {% endif %}
             {% for l in site.links.footer %}
-                <li>&middot;</li>
                 <li>
                     <a href="{{ l.url }}">
                         {% if l.image_url %}
