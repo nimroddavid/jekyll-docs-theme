@@ -25,16 +25,15 @@
     }
     .bs-docs-footer {
         {% if site.ui.footer.color1 %}
-        background:{{site.ui.footer.color1}}
-        {%endif%}
-        {% if site.ui.footer.color2 %}
-        color:{{site.ui.footer.color2}}
-        {%endif%}
+            background:{{site.ui.footer.color1}}
+        {% if site.ui.footer.color2 %},
+            color:{{site.ui.footer.color2}}
+        {% endif %}
     }
     .bs-docs-footer > a{
         {% if site.ui.footer.color3 %}
         color:{{site.ui.footer.color3}}
-        {%endif%}
+        {% endif %}
     }
 </style>
 
