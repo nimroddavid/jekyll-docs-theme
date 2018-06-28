@@ -71,11 +71,13 @@
             {% for l in site.links.footer %}
                 <li>&middot;</li>
                 <li>
-                    {% if l.image_url %}
-                    <a href="{{ l.url }}"><img alt={{l.title}} src={{l.image_url}}/></a>
-                    {% else %}
-                    <a href="{{ l.url }}">{{ l.title }}</a>
-                    {% endif%}
+                    <a href="{{ l.url }}">
+                        {% if l.image_url %}
+                            <img alt={{l.title}} src={{l.image_url}}/>
+                        {% else %}
+                            {{ l.title }}
+                        {% endif%}
+                    </a>
                 </li>
             {% endfor %}
         </ul>
