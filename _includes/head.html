@@ -2,7 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>{% if site.title_prefix %}{{title_prefix | escape}} - {% endif %}{% if page.title %}{{ page.title | escape }}{% else %}{{ site.name | escape }} {{ site.project.version | escape }}{% endif %}{% if site.title_suffix %} - {{title_suffix | escape}}{% endif %}</title>
+<title>{% if site.title_prefix %}{{site.title_prefix}} - {% endif %}{% if page.title %}{{ page.title | escape }}{% else %}{{ site.name | escape }} {{ site.project.version | escape }}{% endif %}{% if site.title_suffix %} - {{site.title_suffix}}{% endif %}</title>
 {% if site.favicon %}
 <link rel="icon" type="{% if site.favicon == 'png' %}image/png{% else %}image/x-icon{% endif %}" href="{{site.github.url}}/favicon.{{site.favicon}}"/>
 {% endif %}
